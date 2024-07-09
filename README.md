@@ -6,7 +6,7 @@ Credits
 
 ### Quick Example
 ```cpp
-#include "Il2cpp_Resolver_Android/il2cpp_resolver.hpp"
+#include "Il2cpp_Resolver_Android/IL2CPP_Resolver.hpp"
 
 void SomeFunction()
 {
