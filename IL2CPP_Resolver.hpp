@@ -161,7 +161,7 @@ namespace IL2CPP
             if (!m_InitExportResolved) 
                 return false;
             
-            std::unordered_map<std::string, void**> m_ExportMap =
+            std::unordered_map<const char*, void**> m_ExportMap =
             {
                 { IL2CPP_CLASS_FROM_NAME_EXPORT,                    &Functions.m_ClassFromName },
                 { IL2CPP_CLASS_GET_FIELDS,                            &Functions.m_ClassGetFields },
