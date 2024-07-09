@@ -2,25 +2,31 @@
 
 namespace Unity
 {
-	struct SLayerMaskFunctions
-	{
-		void* m_pLayerToName = nullptr;
-		void* m_pNameToLayer = nullptr;
-	};
-	extern SLayerMaskFunctions LayerMaskFunctions;
+    struct LayerMaskFunctions_t
+    {
+        void* m_LayerToName = nullptr;
+        void* m_NameToLayer = nullptr;
+    };
+    LayerMaskFunctions_t m_LayerMaskFunctions;
 
-	namespace LayerMask
-	{
-		void Initialize();
+    namespace LayerMask
+    {
+        void Initialize()
+        {
+            IL2CPP::SystemTypeCache::Initializer::Add(UNITY_LAYERMASK_CLASS);
 
-		static System_String* LayerToName(unsigned int m_uLayer)
-		{
-			return reinterpret_cast<System_String*(UNITY_CALLING_CONVENTION)(unsigned int)>(LayerMaskFunctions.m_pLayerToName)(m_uLayer);
-		}
+            m_LayerMaskFunctions.m_LayerToName = IL2CPP::ResolveCall(UNITY_LAYERMASK_LAYERTONAME);
+            m_LayerMaskFunctions.m_NameToLayer = IL2CPP::ResolveCall(UNITY_LAYERMASK_NAMETOLAYER);
+        }
 
-		static unsigned int NameToLayer(const char* m_pName)
-		{
-			return reinterpret_cast<unsigned int(UNITY_CALLING_CONVENTION)(void*)>(LayerMaskFunctions.m_pNameToLayer)(IL2CPP::String::New(m_pName));
-		}
-	}
+        System_String* LayerToName(unsigned int m_uLayer)
+        {
+            return reinterpret_cast<System_String*(UNITY_CALLING_CONVENTION)(unsigned int)>(m_LayerMaskFunctions.m_LayerToName)(m_uLayer);
+        }
+
+        uint32_t NameToLayer(const char* m_pName)
+        {
+            return reinterpret_cast<uint32_t(UNITY_CALLING_CONVENTION)(void*)>(m_LayerMaskFunctions.m_NameToLayer)(IL2CPP::String::New(m_pName));
+        }
+    }
 }
