@@ -365,7 +365,7 @@ namespace IL2CPP
     class CClass
     {
     public:
-        Unity::il2cppObject m_Object = { 0 };
+        Unity::il2cppObject m_Object;
         void* m_CachedPtr = nullptr;
 
         // Wrappers for namespace, ah...
