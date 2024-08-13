@@ -7,11 +7,13 @@
 
 // C++ Headers
 #include <cmath>
-#include <thread>
 #include <chrono>
+#include <string>
+#include <thread>
 #include <vector>
 #include <cstdint>
-#include <iostream>
+
+//#include <iostream>
 #include <unordered_map>
 
 // Application Defines
@@ -40,6 +42,11 @@
 #endif
 
 #include "Defines.hpp"
+
+// Vector2, Vector3 && Quaternion
+#include "Vector2.hpp"
+#include "Vector3.hpp"
+#include "Quaternion.hpp"
 
 // IL2CPP Headers
 #include "Data.hpp"
@@ -218,7 +225,6 @@ namespace IL2CPP
     */
     bool Initialize(bool m_WaitForModule = false, int m_MaxSecondsWait = 60)
     {
-        Globals.m_GameAssembly = dlopen(IL2CPP_MAIN_MODULE, RTLD_NOLOAD);
 
         if (m_WaitForModule)
         {
@@ -233,10 +239,28 @@ namespace IL2CPP
                 std::this_thread::sleep_for(std::chrono::seconds(1));
             }
         }
-
+        else
+            Globals.m_GameAssembly = dlopen(IL2CPP_MAIN_MODULE, RTLD_NOLOAD);
+        
+        if (Globals.m_GameAssembly == nullptr)
+            return false;
+        
         if (!UnityAPI::Initialize())
             return false;
 
+        return true;
+    }
+    
+    bool Initialize(void* GameAssemblyHandle)
+    {
+        if (GameAssemblyHandle != nullptr)
+            Globals.m_GameAssembly = GameAssemblyHandle;
+        else
+            return false;
+        
+        if (!UnityAPI::Initialize())
+            return false;
+        
         return true;
     }
 }
