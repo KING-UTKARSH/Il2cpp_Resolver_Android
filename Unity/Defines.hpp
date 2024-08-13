@@ -21,23 +21,23 @@
 
 // GameObject
 #define UNITY_GAMEOBJECT_CLASS                                        "UnityEngine.GameObject"
-#define UNITY_GAMEOBJECT_ADDCOMPONENT                                 IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::Internal_AddComponentWithType")
+#define UNITY_GAMEOBJECT_ADDCOMPONENT                                IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::Internal_AddComponentWithType")
 #define UNITY_GAMEOBJECT_CREATEPRIMITIVE                             IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::CreatePrimitive")
-#define UNITY_GAMEOBJECT_FIND                                         IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::Find")
-#define UNITY_GAMEOBJECT_GETCOMPONENT                                 IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::GetComponentByName")
-#define UNITY_GAMEOBJECT_GETCOMPONENTS                                IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::GetComponentsInternal")
-#define UNITY_GAMEOBJECT_GETCOMPONENTINCHILDREN                     IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::GetComponentInChildren")
-#define UNITY_GAMEOBJECT_GETACTIVE                                     IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::get_active")
-#define UNITY_GAMEOBJECT_GETLAYER                                     IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::get_layer")
-#define UNITY_GAMEOBJECT_GETTRANSFORM                                 IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::get_transform")
-#define UNITY_GAMEOBJECT_SETACTIVE                                     IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::set_active")
-#define UNITY_GAMEOBJECT_SETLAYER                                     IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::set_layer")
-#define UNITY_GAMEOBJECT_FINDGAMEOBJECTWITHTAG                        IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::FindGameObjectsWithTag")
+#define UNITY_GAMEOBJECT_FIND                                        IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::Find")
+#define UNITY_GAMEOBJECT_GETCOMPONENT                                IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::GetComponentByName")
+#define UNITY_GAMEOBJECT_GETCOMPONENTS                               IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::GetComponentsInternal")
+#define UNITY_GAMEOBJECT_GETCOMPONENTINCHILDREN                      IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::GetComponentInChildren")
+#define UNITY_GAMEOBJECT_GETACTIVE                                   IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::get_active")
+#define UNITY_GAMEOBJECT_GETLAYER                                    IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::get_layer")
+#define UNITY_GAMEOBJECT_GETTRANSFORM                                IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::get_transform")
+#define UNITY_GAMEOBJECT_SETACTIVE                                   IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::set_active")
+#define UNITY_GAMEOBJECT_SETLAYER                                    IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::set_layer")
+#define UNITY_GAMEOBJECT_FINDGAMEOBJECTWITHTAG                       IL2CPP_RStr(UNITY_GAMEOBJECT_CLASS"::FindGameObjectsWithTag")
 
 // LayerMask
 #define UNITY_LAYERMASK_CLASS                                        "UnityEngine.LayerMask"
-#define UNITY_LAYERMASK_LAYERTONAME                                    IL2CPP_RStr(UNITY_LAYERMASK_CLASS"::LayerToName")
-#define UNITY_LAYERMASK_NAMETOLAYER                                    IL2CPP_RStr(UNITY_LAYERMASK_CLASS"::NameToLayer")
+#define UNITY_LAYERMASK_LAYERTONAME                                 IL2CPP_RStr(UNITY_LAYERMASK_CLASS"::LayerToName")
+#define UNITY_LAYERMASK_NAMETOLAYER                                 IL2CPP_RStr(UNITY_LAYERMASK_CLASS"::NameToLayer")
 
 // MonoBehaviour
 #define UNITY_MONOBEHAVIOUR_CLASS                                   "UnityEngine.MonoBehaviour"
@@ -45,7 +45,7 @@
 // Object
 #define UNITY_OBJECT_CLASS                                            "UnityEngine.Object"
 #define UNITY_OBJECT_DESTROY                                        IL2CPP_RStr(UNITY_OBJECT_CLASS"::Destroy")
-#define UNITY_OBJECT_FINDOBJECTSOFTYPE                                IL2CPP_RStr(UNITY_OBJECT_CLASS"::FindObjectsOfType(System.Type,System.Boolean)")
+#define UNITY_OBJECT_FINDOBJECTSOFTYPE                              IL2CPP_RStr(UNITY_OBJECT_CLASS"::FindObjectsOfType(System.Type,System.Boolean)")
 #define UNITY_OBJECT_GETNAME                                        IL2CPP_RStr(UNITY_OBJECT_CLASS"::GetName")
 
 // Rigidbody
@@ -62,14 +62,16 @@
 #define UNITY_TRANSFORM_GETCHILD                                    IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::GetChild")
 #define UNITY_TRANSFORM_GETCHILDCOUNT                               IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_childCount")
 #define UNITY_TRANSFORM_FINDCHILD                                   IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::FindRelativeTransformWithPath")
-#define UNITY_TRANSFORM_GETPOSITION                                    IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_position_Injected")
-#define UNITY_TRANSFORM_GETROTATION                                    IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_rotation_Injected")
+#define UNITY_TRANSFORM_GETPOSITION                                 IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_position_Injected")
+#define UNITY_TRANSFORM_GETROTATION                                 IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_rotation_Injected")
 #define UNITY_TRANSFORM_GETLOCALPOSITION                            IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_localPosition_Injected")
-#define UNITY_TRANSFORM_GETLOCALSCALE                                IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_localScale_Injected")
-#define UNITY_TRANSFORM_SETPOSITION                                    IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_position_Injected")
-#define UNITY_TRANSFORM_SETROTATION                                    IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_rotation_Injected")
+#define UNITY_TRANSFORM_GETLOCALSCALE                               IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_localScale_Injected")
+#define UNITY_TRANSFORM_SETPOSITION                                 IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_position_Injected")
+#define UNITY_TRANSFORM_SETROTATION                                 IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_rotation_Injected")
+#define UNITY_TRANSFORM_GETFORWARD                                  IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::get_forward")
+#define UNITY_TRANSFORM_SETFORWARD                                  IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_forward")
 #define UNITY_TRANSFORM_SETLOCALPOSITION                            IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_localPosition_Injected")
-#define UNITY_TRANSFORM_SETLOCALSCALE                                IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_localScale_Injected")
+#define UNITY_TRANSFORM_SETLOCALSCALE                               IL2CPP_RStr(UNITY_TRANSFORM_CLASS"::set_localScale_Injected")
 
 namespace Unity
 {
